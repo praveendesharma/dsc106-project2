@@ -138,6 +138,13 @@
           }
         }
       }
+
+      figure img {
+        width: 100%;
+        height: auto;
+        display: block;
+        max-width: 100%;
+      }
     </style>
   </head>
 
@@ -152,43 +159,43 @@
     </header>
 
     <main>
-      <h2>Proposition: Black complainants are disproportionately likely to report<br>repeat incidents with the same officer.</h2>
+      <h2>Proposition: Black complainants are disproportionately involved in repeat incidents with the same police officers.</h2>
 
       <section>
         <h3>FOR the Proposition</h3>
 
         <figure>
-          <img src="pro_visualization.png" alt="decreasing exoneration trend with age" width="1000"/>
-          <figcaption>Younger officers appear to benefit from a higher likelihood of exoneration, raising concerns about unequal accountability.</figcaption>
+          <img src="pro_visualization.png" alt="decreasing exoneration trend with age"/>
+          <figcaption>Black complainants file repeat complaints more often and more consistently, highlighting a persistent pattern of officer misconduct.</figcaption>
         </figure>
 
         <p>Design Decisions and Rationale:</p>
 
         <ul>
-          <li><strong>Y-axis Truncation (0.04 to 0.058)</strong></li>
+          <li><strong>Cumulative Line Plot by Ethnicity</strong></li>
           <ul>
-            <li>Rating: -2 (Highly Deceptive)</li>
-            <li>Rationale: Drastically exaggerates what is only a ~1% variation, making it appear more dramatic.</li>
+            <li>Rating: +2 (Fully Earnest)</li>
+            <li>Rationale: Provides an accurate, unaggregated view of repeat complaint growth over time. Supports direct comparison without manipulation or smoothing.</li>
           </ul>
-          <li><strong>Color Choice (forestgreen)</strong></li>
+          <li><strong>Shaded Area Under Black Line</strong></li>
           <ul>
-            <li>Rating: -1 (Mildly Deceptive)</li>
-            <li>Rationale: Green implies approval/success, subtly associating youth with positivity.</li>
+            <li>Rating: +1 (Slightly Earnest)</li>
+            <li>Rationale: Draws subtle attention to the Black trendline, reinforcing the proposition without altering underlying data. Aids clarity more than persuasion.</li>
           </ul>
-          <li><strong>Regression Smoothing (Lowess)</strong></li>
-          <ul>
-            <li>Rating: +1.5 (Mostly Earnest)</li>
-            <li>Rationale: Emphasizes general trend cleanly. No outlier distortion.</li>
-          </ul>
-          <li><strong>Highlighting Peak Zone with Shaded Region</strong></li>
+          <li><strong>Muted Colors for Non-Black Groups</strong></li>
           <ul>
             <li>Rating: -0.5 (Mildly Deceptive)</li>
-            <li>Rationale: Draws attention selectively to the most favorable range.</li>
+            <li>Rationale: De-emphasizes other ethnic groups by assigning them lower-contrast colors, visually prioritizing Black complainants regardless of proximity.</li>
           </ul>
-          <li><strong>Title Language (“More Likely”)</strong></li>
+          <li><strong>Y-Axis Truncation on Bar Chart (Starts at 40%)</strong></li>
           <ul>
-            <li>Rating: -1 (Moderately Deceptive)</li>
-            <li>Rationale: “More likely” sounds substantial, though the magnitude of change is small.</li>
+            <li>Rating: -1.5 (Moderately Deceptive)</li>
+            <li>Rationale: Amplifies perceived differences between groups. Although the order remains true, the effect size is exaggerated visually.</li>
+          </ul>
+          <li><strong>Spike Annotation for Black Line</strong></li>
+          <ul>
+            <li>Rating: +1 (Mostly Earnest)</li>
+            <li>Rationale: Highlights a real historical trend but selectively directs viewer attention to the most dramatic change, reinforcing the argument narrative.</li>
           </ul>
         </ul>
       </section>
@@ -197,49 +204,54 @@
         <h3>AGAINST the Proposition</h3>
 
         <figure>
-          <img src="against_visualization.png" alt="neutral exoneration trend across ages" width="1000"/>
+          <img src="against_visualization.png" alt="neutral exoneration trend across ages"/>
           <figcaption>Despite small fluctuations, exoneration rates remain relatively stable across officer ages, suggesting minimal influence of age.</figcaption>
         </figure>
 
         <p>Design Decisions and Rationale:</p>
 
         <ul>
-          <li><strong>Use of Full Y-axis (0 to 0.6)</strong></li>
-          <ul>
-            <li>Rating: +2 (Earnest)</li>
-            <li>Rationale: Avoids exaggerating small fluctuations. Creates a stable, flat visual narrative in support of the counter-argument.</li>
-          </ul>
-          <li><strong>Neutral Color Choice (darkorange)</strong></li>
-          <ul>
-            <li>Rating: +1.5 (Mostly Earnest)</li>
-            <li>Rationale: Orange is attention-grabbing but not emotionally loaded like red or green. Keeps tone moderate and less persuasive.</li>
-          </ul>
-          <li><strong>Mean Line with Annotation</strong></li>
-          <ul>
-            <li>Rating: +1.5 (Mostly Earnest)</li>
-            <li>Rationale: Reinforces the central message of stability. Helps viewers orient their interpretation around a consistent baseline.</li>
-          </ul>
-          <li><strong>Framing of Age 41 Dip as Minor</strong></li>
-          <ul>
-            <li>Rating: -0.5 (Mildly Deceptive)</li>
-            <li>Rationale: Reinforces the central message of stability. Helps viewers orient their interpretation around a consistent baseline.</li>
-          </ul>
-          <li><strong>X-axis Range Restriction (22-45)</strong></li>
+          <li><strong>Red Border Around Black Complainant Waffle</strong></li>
           <ul>
             <li>Rating: -1 (Moderately Deceptive)</li>
-            <li>Rationale: Focuses on a subset of ages where the data looks flatter, avoiding visible patterns at higher ages.</li>
+            <li>Rationale: Visually singles out Black complainants as the focal point, priming the viewer to interpret their group as uniquely underrepresented—even though substantiation rates are similar across groups.</li>
+          </ul>
+
+          <li><strong>Dot-Based Waffle Representation</strong></li>
+          <ul>
+            <li>Rating: +2 (Fully Earnest)</li>
+            <li>Rationale: Offers a transparent, intuitive way to represent proportions without distortion. Every dot equals 1%, allowing fair visual comparison between groups.</li>
+          </ul>
+
+          <li><strong>Use of Red for the Longest Bar</strong></li>
+          <ul>
+            <li>Rating: +0.5 (Slightly Earnest)</li>
+            <li>Rationale: Emphasizes the Black group's average wait time through color, guiding attention without altering the underlying scale or data.</li>
+          </ul>
+
+          <li><strong>2.3-Year Annotation with Arrow</strong></li>
+          <ul>
+            <li>Rating: +1 (Mostly Earnest)</li>
+            <li>Rationale: Helps quantify the disparity clearly, but strategically directs focus only to the most extreme value to support the counter-argument.</li>
+          </ul>
+
+          <li><strong>Sorted Waffle Layout by Substantiation Rate</strong></li>
+          <ul>
+            <li>Rating: +1.5 (Mostly Earnest)</li>
+            <li>Rationale: Ordering groups from highest to lowest substantiation subtly frames Black complainants as trailing others, reinforcing the key narrative without altering values.</li>
           </ul>
         </ul>
+
       </section>
 
       <section>
         <h2>Final Reflection</h2>
-
-        <p>Designing both plots required balancing clarity with persuasion. For the "neutral" plot, I intentionally used full y-axis scaling, a soft palette, and mean-line anchoring to convey stability and lack of trend. However, I still excluded older officers to avoid emerging trends — subtly deceptive but defensible in context.
-
-          The persuasive plot, by contrast, uses several deceptive strategies: truncated y-axis, emotionally positive colors, and a shaded peak range to amplify a minor difference. Despite this, none of the visual choices are dishonest — they all exist on the spectrum of rhetorical framing.
-          
-          This project helped me realize that ethical visualization is not a binary. It's a craft of balance. Acceptable persuasive design is about subtle emphasis, not distortion. Misleading design, in contrast, breaks audience trust by obscuring structure or fabricating significance. The goal should be to guide interpretation, not to rig it.</p>
+      
+        <p>Designing persuasive visualizations for the proposition <em>“Black complainants are disproportionately involved in repeat incidents with the same police officers”</em> challenged me to think critically about how data transformations and visual framing influence perception. The first visualization — supporting the proposition — relied on straightforward cumulative aggregation and a calculated repeat-complaint rate to emphasize disparity. It was relatively easy to construct and required minimal manipulation: the trends were visually self-evident once grouped by ethnicity and filtered for officer-level repetition. The second visualization — opposing the proposition — required more nuanced transformations. I had to isolate only repeat complaints and then calculate the proportion that were substantiated for each group. Additionally, I computed average time gaps between incidents, which added a compelling dimension to the argument.</p>
+      
+        <p>What surprised me most during this process was how small, subtle visual choices could shift a narrative dramatically. For instance, the shaded background behind the Black trendline in the first chart draws immediate attention without changing the underlying structure. Meanwhile, the red border around the Black waffle chart in the second visualization has a much more forceful visual effect, which, while persuasive, also borders on manipulative if not justified. It taught me that ethical visualization doesn't always mean avoiding persuasive techniques — it means applying them transparently and with restraint.</p>
+      
+        <p>Through this project, I've come to define ethical visualization as the act of guiding interpretation while preserving structural honesty. Persuasion is acceptable — even expected — in argumentative visuals, but deception crosses a line when it obscures data patterns or selectively filters reality. Acceptable persuasive choices emphasize or reframe; misleading ones distort or fabricate. Ultimately, this project helped me embrace the tension between advocacy and accuracy, and how thoughtful design can support both. I now approach visual storytelling not as a tool for truth or bias, but as a medium for deliberate, principled framing.</p>
       </section>
     </main>
   </body>
